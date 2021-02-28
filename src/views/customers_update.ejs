@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/reset.css" rel="stylesheet"> 
+    <link href="/css/main.css" rel="stylesheet"> 
+    <title>Clients</title>
+</head>
+<body>
+    <header>
+        <p>REGISTRO DE CLIENTES</p>
+        <a href="/">INICIO</a>
+    </header>
+        <div class="register_form upd">
+            <div class="form_container">
+                <h2> ACTUALIZACION DE DATOS DEL USUARIO <b><%= datau[0].name%></b></h2>
+                <form action="/update/<%=datau[0].id%>" method="POST" class="reg_form">
+                    <input name="name" autocomplete="off" required value="<%=datau[0].name%>">
+                    <input name="phone" type="number" autocomplete="off" required value="<%=datau[0].phone%>">
+                    <input name="dir" autocomplete="off" required value="<%=datau[0].dir%>">
+                    <button type="submit" id="submit_button"> EDITAR </button>
+                </form>
+            </div>
+        </div>
+</body>
+</html>

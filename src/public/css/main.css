@@ -1,0 +1,140 @@
+/* ------------------------------------------------- FORM STYLES ------------------------------------------------- */
+body{
+    font-family: sans-serif;
+    background-color: #bbb;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header{
+    background-color: white;
+    color: #bbb;
+    height: fit-content;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header p{ margin: 0px 20px; font-weight: bold; font-size: 1.3em; color: #bbb;}
+
+header a{ margin: 0px 20px ; font-weight: bold; font-size: 1.3em; color: #bbb; text-decoration: none;}
+
+header a:hover{ cursor: pointer;}
+
+header a::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #bbb;
+    transition: width .3s;
+}
+
+header a:hover::after{
+    width: 100%;
+    transition: width .3s;
+}
+
+#all-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    background-color: white;
+    height: 500px;
+}
+
+
+.register_form{
+    display: flex;
+    width: 30%;
+    height: 100%;
+    background-color: white;
+    place-self: start;
+    color: rgb(179, 179, 179);
+    border-left: 1px solid #bbb;
+    justify-content: center;
+    align-items: center;
+}
+.upd{
+    border-radius: 20px;
+    padding: 20px;
+    margin: auto;
+    height: fit-content;
+    text-align: center;
+    word-break: break-word;
+}
+
+.upd b{ color: rgb(0, 0, 0); font-weight: bold; text-transform: uppercase;}
+
+.register_form .form_container{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register_form .form_container .reg_form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.register_form .form_container .reg_form input{
+    width: 80%;
+    padding: 10px;
+    border: 2px solid rgb(179, 179, 179);
+    margin: 10px;
+    border-radius: 20px;
+    transition: .3s;
+}
+.register_form .form_container .reg_form div{
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.register_form .form_container .reg_form div input{
+    margin: 0px 7px;
+    width: fit-content;
+}
+
+.register_form .form_container .reg_form input:focus{
+    outline: none;
+    border-color: black;
+    transition: .3s;
+}
+
+.register_form .form_container .reg_form #submit_button{
+    background-color: transparent;
+    width: 80%;
+    transition: .3s;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-color: rgb(36, 36, 168);
+    color: rgb(36, 36, 168);
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px;
+}
+.register_form .form_container .reg_form #submit_button:hover{
+    background-color:rgb(36, 36, 168);
+    color: white;
+}
+
+
+/* ---------------------------------------------- SHOWING DATABASE ----------------------------------------------*/
+.data_show{ width: 70%; display: flex; align-items: center; flex-direction: column; height: 100%;}
+.data_show p{ font-size: 1.3em; color: #bbb; font-weight: bold; margin: 15px 0 0 0 ;}
+.showing_table{display: grid; grid-template-columns: 7% 23% 20% 30% 20%; width: 95%; grid-template-rows: 80px; grid-auto-rows: 80px; height: 90%; overflow-y: scroll; border: 1px solid #bbb; margin: 20px}
+.showing_table div{outline: 1px solid #bbb; display: flex; justify-content: center; align-items: center; word-break: break-word; text-align: center;}
+.showing_table .action{ display: flex; flex-direction: column;}
+.showing_table .action a{width: 100%; height: 50%; border: none; text-decoration: none; display: flex; justify-content: center; align-items: center;}
+.showing_table .action a:first-child{ font-weight: bold; transition: .3s;color: rgb(129 255 129); border-bottom: 1px solid #bbb; background-color: white;} 
+.showing_table .action a:last-child{ font-weight: bold; transition: .3s;color: rgb(241 100 100); background-color: white;}
+.showing_table .action a:first-child:hover{background-color: rgb(129 255 129); color: white;}
+.showing_table .action a:last-child:hover{background-color: rgb(241 100 100); color: white;}

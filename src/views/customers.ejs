@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/reset.css" rel="stylesheet"> 
+    <link href="/css/main.css" rel="stylesheet"> 
+    <title>Clients</title>
+</head>
+<body>
+    <header>
+        <p>REGISTRO DE CLIENTES</p>
+        <a>INICIO</a>
+    </header>
+    <section id="all-container">
+        <div class="data_show">
+            <p>CLIENTES REGISTRADOS</p>
+            <div class="showing_table">
+                <div class="customer_id">ID</div>
+                <div class="customer_name">Nombre</div>
+                <div class="customer_phone">Telefono</div>
+                <div class="customer_direction">Dirección</div>
+                <div class="action">Accion</div>
+                <% if(data){%>
+                    <% for(let i = 0; i < data.length; i++){%>
+                    <div class="customer_id"> <%= i + 1 %> </div>
+                    <div class="customer_name"> <%= data[i].name %> </div>
+                    <div class="customer_phone"> <%= data[i].phone %> </div>
+                    <div class="customer_direction"> <%= data[i].dir %> </div>
+                    <div class="action"> <a href="/update/<%=data[i].id%>">MODIFICAR</a><a href="/delete/<%=data[i].id%>">ELIMINAR</a> </div>
+                    <% }; %>
+                <% }%>
+            </div>
+        </div>
+        </div>
+        <div class="register_form">
+            <div class="form_container">
+                <h2> REGISTRO DE CLIENTE</h2>
+                <form action="/add" method="POST" class="reg_form">
+                    <input name="name" autocomplete="off" placeholder="NOMBRE Ej : Jhon Doe" required>
+                    <input name="phone" type="number" autocomplete="off" placeholder="TELEFONO Ej : 315 512 6547" required>
+                    <input name="dir" autocomplete="off" placeholder="DIRECCIÓN Ej : KR 29 #80A 22" required>
+                    <button type="submit" id="submit_button"> GUARDAR </button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
